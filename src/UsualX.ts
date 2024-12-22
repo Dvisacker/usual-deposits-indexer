@@ -2,7 +2,6 @@ import { ponder } from "ponder:registry";
 import { deposits } from "../ponder.schema";
 
 ponder.on("UsualX:Deposit", async ({ event, context }) => {
-  console.log(event.args);
   await context.db.insert(deposits).values({
     network: context.network.name,
     timestamp: event.block.timestamp,
