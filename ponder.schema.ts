@@ -1,6 +1,6 @@
 import { onchainTable, primaryKey } from "ponder";
 
-export const deposits = onchainTable("deposits", (t) => ({
+export const deposit = onchainTable("deposit", (t) => ({
   network: t.text(),
   block: t.bigint(),
   timestamp: t.bigint(),
